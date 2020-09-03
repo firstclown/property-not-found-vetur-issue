@@ -1,13 +1,23 @@
 <template>
   <div>
-    {{ fo }}
+    {{ foo }}
+    {{ name }}
   </div>
 </template>
 
 <script>
-import * as _ from 'lodash'
-
 export default {
-  props: ['foo', 'bar']
-}
+  name: "Test",
+  props: ["foo", "bar"],
+  data() {
+    return {
+      name: "Joe",
+    };
+  },
+  computed: {
+    upperName() {
+      return this.name.toUpperCase();
+    },
+  },
+};
 </script>
